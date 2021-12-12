@@ -2,6 +2,7 @@ package com.example.vea;
 
 import com.example.vea.converter.CompanyConverter;
 import com.example.vea.converter.DeveloperConverter;
+import com.example.vea.converter.EmployeeConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
@@ -15,9 +16,13 @@ public class Config implements WebMvcConfigurer {
     @Autowired
     CompanyConverter companyConverter;
 
+    @Autowired
+    EmployeeConverter employeeConverter;
+
     @Override
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(developerConverter);
         registry.addConverter(companyConverter);
+        registry.addConverter(employeeConverter);
     }
 }

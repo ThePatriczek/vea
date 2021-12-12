@@ -2,10 +2,17 @@ package com.example.vea.model;
 
 import javax.persistence.*;
 
-@MappedSuperclass
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(
+        name = "position",
+        discriminatorType = DiscriminatorType.STRING
+)
 public class Employee {
+
     @Column(name = "id")
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
     @Column(name = "name")

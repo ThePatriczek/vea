@@ -2,11 +2,11 @@ package com.example.vea.model;
 
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "DEVELOPER")
+@DiscriminatorValue(value = "DEVELOPER")
 public class Developer extends Employee {
 
     @Column(name = "language")
