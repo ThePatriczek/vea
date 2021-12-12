@@ -20,11 +20,11 @@ public class DeveloperRepositoryJdbc {
     }
 
     public List<Developer> getAll() {
-        return jdbcTemplate.query("SELECT * FROM DEVELOPER", new DeveloperMapper());
+        return jdbcTemplate.query("SELECT * FROM EMPLOYEE WHERE position = 'DEVELOPER' ", new DeveloperMapper());
     }
 
     public Developer findById(Integer id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM DEVELOPER WHERE id = ?", new Object[]{id}, new DeveloperMapper());
+        return jdbcTemplate.queryForObject("SELECT * FROM EMPLOYEE WHERE id = ?", new Object[]{id}, new DeveloperMapper());
     }
 
     public void save(Developer developer) {
@@ -32,7 +32,7 @@ public class DeveloperRepositoryJdbc {
             jdbcTemplate.update("UPDATE DEVELOPER SET name = ?, language = ?, company_id = ?, WHERE id = ?",
                     developer.getName(), developer.getLanguage(), developer.getCompany().getId(), developer.getId());
         } else {
-            jdbcTemplate.update("INSERT INTO DEVELOPER(name, language, company_id) VALUES('AUTHOR', ?, ?, ?)",
+            jdbcTemplate.update("INSERT INTO DEVELOPER(name, language, company_id, position) VALUES(?, ?, ?, 'DEVELOPER')",
                     developer.getName(), developer.getLanguage(), developer.getCompany().getId());
         }
 
