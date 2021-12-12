@@ -1,3 +1,51 @@
 Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
 Time: Sun Dec 12 13:50:15 CET 2021
 
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 13:56:49 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 14:58:39 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 15:08:48 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 15:10:59 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 15:16:02 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 15:16:03 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 15:22:36 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 15:22:37 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 16:06:02 CET 2021
+
+Action: List com.example.vea.service.DeveloperServiceJpa.getAll()
+Time: Sun Dec 12 16:06:02 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 16:06:04 CET 2021
+
+Action: List com.example.vea.service.DeveloperServiceJpa.getAll()
+Time: Sun Dec 12 16:06:04 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 16:11:15 CET 2021
+
+Action: List com.example.vea.service.DeveloperServiceJpa.getAll()
+Time: Sun Dec 12 16:11:15 CET 2021
+
+Action: List com.example.vea.controller.DeveloperController.getAllDevelopers()
+Time: Sun Dec 12 16:12:24 CET 2021
+
+Action: List com.example.vea.service.DeveloperServiceJpa.getAll()
+Time: Sun Dec 12 16:12:24 CET 2021
+
