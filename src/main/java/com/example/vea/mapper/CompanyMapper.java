@@ -1,4 +1,4 @@
-package com.example.vea.mappers;
+package com.example.vea.mapper;
 
 import com.example.vea.model.Company;
 import org.springframework.jdbc.core.RowMapper;

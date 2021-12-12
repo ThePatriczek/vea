@@ -1,6 +1,6 @@
 package com.example.vea.repository;
 
-import com.example.vea.mappers.DeveloperMapper;
+import com.example.vea.mapper.DeveloperMapper;
 import com.example.vea.model.Developer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
