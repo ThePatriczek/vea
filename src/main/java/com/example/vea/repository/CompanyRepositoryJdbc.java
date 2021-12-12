@@ -12,6 +12,7 @@ import java.util.List;
 @Repository
 public class CompanyRepositoryJdbc {
 
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
