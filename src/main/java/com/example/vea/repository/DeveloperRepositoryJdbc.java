@@ -29,16 +29,16 @@ public class DeveloperRepositoryJdbc {
 
     public void save(Developer developer) {
         if (developer.getId() > 0) {
-            jdbcTemplate.update("UPDATE DEVELOPER SET name = ?, language = ?, company_id = ?, WHERE id = ?",
+            jdbcTemplate.update("UPDATE EMPLOYEE SET name = ?, language = ?, company_id = ?, WHERE id = ?",
                     developer.getName(), developer.getLanguage(), developer.getCompany().getId(), developer.getId());
         } else {
-            jdbcTemplate.update("INSERT INTO DEVELOPER(name, language, company_id, position) VALUES(?, ?, ?, 'DEVELOPER')",
+            jdbcTemplate.update("INSERT INTO EMPLOYEE(name, language, company_id, position) VALUES(?, ?, ?, 'DEVELOPER')",
                     developer.getName(), developer.getLanguage(), developer.getCompany().getId());
         }
 
     }
 
     public void delete(Integer id) {
-        jdbcTemplate.update("DELETE FROM DEVELOPER WHERE id = ?", id);
+        jdbcTemplate.update("DELETE FROM EMPLOYEE WHERE id = ?", id);
     }
 }

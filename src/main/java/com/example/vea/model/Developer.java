@@ -16,8 +16,8 @@ public class Developer extends Employee {
         super();
     }
 
-    public Developer(int id, String name, String language, Company company) {
-        super(id, name, company);
+    public Developer(int id, String name, String language, Company company, Project project) {
+        super(id, name, company, project);
         this.language = language;
     }
 

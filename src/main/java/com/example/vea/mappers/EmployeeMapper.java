@@ -1,22 +1,20 @@
 package com.example.vea.mappers;
 
 import com.example.vea.model.Company;
-import com.example.vea.model.Developer;
+import com.example.vea.model.Employee;
 import com.example.vea.model.Project;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DeveloperMapper implements RowMapper<Developer> {
+public class EmployeeMapper implements RowMapper<Employee> {
     @Override
-    public Developer mapRow(ResultSet rs, int rowNum) throws SQLException {
-        return new Developer(
+    public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
+        return new Employee(
                 rs.getInt("id"),
                 rs.getString("name"),
-                rs.getString("language"),
                 new Company(rs.getInt("company_id")),
-                new Project(rs.getInt("project_id"))
-        );
+                new Project(rs.getInt("project_id")));
     }
 }

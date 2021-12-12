@@ -3,12 +3,7 @@ package com.example.vea.model;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(
-        name = "position",
-        discriminatorType = DiscriminatorType.STRING
-)
-public class Employee {
+public class Project {
 
     @Column(name = "id")
     @Id
@@ -22,19 +17,18 @@ public class Employee {
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @ManyToOne
-    @JoinColumn(name = "project_id")
-    private Project project;
-
-    public Employee(int id, String name, Company company, Project project) {
+    public Project(int id, String name, Company company) {
         this.id = id;
         this.name = name;
         this.company = company;
-        this.project = project;
     }
 
-    public Employee() {
+    public Project() {
 
+    }
+
+    public Project(int project_id) {
+        this.id = project_id;
     }
 
     public Company getCompany() {
@@ -59,13 +53,5 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 }
