@@ -13,7 +13,7 @@ import java.util.List;
         value = "accessType",
         havingValue = "jdbc",
         matchIfMissing = false)
-public class DeveloperServiceJdbc implements DeveloperService {
+public class DeveloperServiceJdbc implements BaseService<Developer> {
 
     @Autowired
     DeveloperRepositoryJdbc developerRepositoryJdbc;

@@ -14,27 +14,27 @@ import java.util.List;
         value="accessType",
         havingValue = "jpa",
         matchIfMissing = true)
-public class DeveloperServiceJpa implements DeveloperService {
+public class DeveloperServiceJpa implements BaseService<Developer> {
 
     @Autowired
-    private DeveloperRepositoryJpa developerRepository;
+    private DeveloperRepositoryJpa developerRepositoryJpa;
 
     public List<Developer> getAll() {
-        return developerRepository.findAll();
+        return developerRepositoryJpa.findAll();
     }
 
     @Transactional
     public Developer save(Developer developer) {
-        developerRepository.save(developer);
+        developerRepositoryJpa.save(developer);
         return developer;
     }
 
     public Developer findById(Integer id) {
-        return developerRepository.findById(id).orElse(null);
+        return developerRepositoryJpa.findById(id).orElse(null);
     }
 
     @Transactional
     public void delete(Integer id) {
-        developerRepository.deleteById(id);
+        developerRepositoryJpa.deleteById(id);
     }
 }

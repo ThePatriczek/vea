@@ -1,7 +1,6 @@
 package com.example.vea.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "COMPANY")
@@ -13,9 +12,6 @@ public class Company {
 
     @Column(name = "name")
     String name;
-
-    @OneToMany(mappedBy = "company", fetch = FetchType.EAGER)
-    List<Developer> developers;
 
     public Company(int company_id) {
         this.id = company_id;

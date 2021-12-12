@@ -12,5 +12,5 @@ CREATE TABLE DEVELOPER
     language VARCHAR2(50) NOT NULL,
     company_id NUMBER(10) NOT NULL,
     PRIMARY KEY(id),
-    foreign key (company_id) references COMPANY(id)
+    foreign key (company_id) references COMPANY(id) on delete cascade
 );
