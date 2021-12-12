@@ -16,30 +16,29 @@ public class DeveloperController {
     private DeveloperServiceJpa developerServiceJpa;
 
     @RequestMapping(value = "/developer/{id}", method = RequestMethod.GET)
-    Developer findById(@PathVariable Integer id){
-        return  developerServiceJpa.findById(id);
+    Developer findById(@PathVariable Integer id) {
+        return developerServiceJpa.findById(id);
     }
 
     @RequestMapping(value = "/developer", method = RequestMethod.POST)
-    String save(@RequestBody Developer developer){
+    String save(@RequestBody Developer developer) {
         developerServiceJpa.save(developer);
         return "SUCCESS";
     }
 
     @RequestMapping(value = "/developer", method = RequestMethod.PUT)
-    Developer update(@RequestBody Developer developer){
+    Developer update(@RequestBody Developer developer) {
         return developerServiceJpa.save(developer);
     }
 
     @RequestMapping(value = "/developer", method = RequestMethod.DELETE)
-    Map<String, String> delete(@RequestParam Integer id){
+    Map<String, String> delete(@RequestParam Integer id) {
         Map<String, String> status = new HashMap<>();
         Developer developer = developerServiceJpa.findById(id);
-        if(developer != null){
+        if (developer != null) {
             developerServiceJpa.delete(developer.getId());
             status.put("Status", "Developer deleted successfully");
-        }
-        else {
+        } else {
             status.put("Status", "Developer not exist");
         }
 
@@ -47,7 +46,7 @@ public class DeveloperController {
     }
 
     @RequestMapping(value = "/developers", method = RequestMethod.GET)
-    List<Developer> getAll(){
+    List<Developer> getAll() {
         return developerServiceJpa.getAll();
     }
 }

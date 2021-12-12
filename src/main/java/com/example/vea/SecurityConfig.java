@@ -13,7 +13,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/developer/{id}","/developers").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/developer/{id}", "/developers").hasAnyRole("ADMIN")
                 .and()
                 .csrf()
                 .disable()

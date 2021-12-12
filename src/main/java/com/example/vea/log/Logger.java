@@ -22,7 +22,7 @@ public class Logger {
         try {
             fileWriter = new FileWriter(filePath, true);
             fileWriter.write("Action: " + joinPoint.getSignature());
-            fileWriter.write("\nTime: " + date.toString() + "\n\n");
+            fileWriter.write("\nTime: " + date + "\n\n");
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();

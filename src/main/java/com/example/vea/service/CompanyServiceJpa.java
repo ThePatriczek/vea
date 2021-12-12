@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 @ConditionalOnProperty(
-        value="accessType",
+        value = "accessType",
         havingValue = "jpa",
         matchIfMissing = true)
 public class CompanyServiceJpa implements BaseService<Company> {

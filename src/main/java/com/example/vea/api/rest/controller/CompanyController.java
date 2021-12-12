@@ -16,30 +16,29 @@ public class CompanyController {
     private CompanyServiceJpa companyServiceJpa;
 
     @RequestMapping(value = "/company/{id}", method = RequestMethod.GET)
-    Company findById(@PathVariable Integer id){
-        return  companyServiceJpa.findById(id);
+    Company findById(@PathVariable Integer id) {
+        return companyServiceJpa.findById(id);
     }
 
     @RequestMapping(value = "/company", method = RequestMethod.POST)
-    String save(@RequestBody Company company){
+    String save(@RequestBody Company company) {
         companyServiceJpa.save(company);
         return "SUCCESS";
     }
 
     @RequestMapping(value = "/company", method = RequestMethod.PUT)
-    Company update(@RequestBody Company developer){
+    Company update(@RequestBody Company developer) {
         return companyServiceJpa.save(developer);
     }
 
     @RequestMapping(value = "/company", method = RequestMethod.DELETE)
-    Map<String, String> delete(@RequestParam Integer id){
+    Map<String, String> delete(@RequestParam Integer id) {
         Map<String, String> status = new HashMap<>();
         Company company = companyServiceJpa.findById(id);
-        if(company != null){
+        if (company != null) {
             companyServiceJpa.delete(company.getId());
             status.put("Status", "Company deleted successfully");
-        }
-        else {
+        } else {
             status.put("Status", "Company not exist");
         }
 
@@ -47,7 +46,7 @@ public class CompanyController {
     }
 
     @RequestMapping(value = "/companies", method = RequestMethod.GET)
-    List<Company> getAll(){
+    List<Company> getAll() {
         return companyServiceJpa.getAll();
     }
 }

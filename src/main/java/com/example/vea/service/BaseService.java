@@ -6,8 +6,11 @@ import java.util.List;
 
 @Service
 public interface BaseService<T> {
-    public List<T> getAll();
-    public T save(T developer);
-    public T findById(Integer id);
-    public void delete(Integer id);
+    List<T> getAll();
+
+    T save(T developer);
+
+    T findById(Integer id);
+
+    void delete(Integer id);
 }
