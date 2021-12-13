@@ -37,4 +37,8 @@ public class EmployeeServiceJpa implements BaseService<Employee> {
     public void delete(Integer id) {
         employeeRepositoryJpa.deleteById(id);
     }
+
+    public Employee findByName(String name) {
+        return employeeRepositoryJpa.findByName(name);
+    }
 }

@@ -37,4 +37,8 @@ public class ProjectServiceJpa implements BaseService<Project> {
     public void delete(Integer id) {
         projectRepositoryJpa.deleteById(id);
     }
+
+    public Project findByName(String name) {
+        return projectRepositoryJpa.findByName(name);
+    }
 }

@@ -37,4 +37,8 @@ public class DeveloperServiceJpa implements BaseService<Developer> {
     public void delete(Integer id) {
         developerRepositoryJpa.deleteById(id);
     }
+
+    public Developer findByName(String name) {
+        return developerRepositoryJpa.findByName(name);
+    }
 }

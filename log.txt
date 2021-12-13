@@ -160,3 +160,6 @@ Time: Sun Dec 12 21:13:20 CET 2021
 Action: List com.example.vea.repository.DeveloperRepositoryJdbc.getAll()
 Time: Sun Dec 12 21:13:20 CET 2021
 
+Action: List com.example.vea.service.DeveloperServiceJpa.getAll()
+Time: Sun Dec 12 22:02:24 CET 2021
+

@@ -37,4 +37,8 @@ public class CompanyServiceJpa implements BaseService<Company> {
     public void delete(Integer id) {
         companyRepositoryJpa.deleteById(id);
     }
+
+    public Company findByName(String name) {
+        return companyRepositoryJpa.findByName(name);
+    }
 }
